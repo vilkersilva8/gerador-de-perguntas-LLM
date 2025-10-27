@@ -16,7 +16,7 @@ def extrair_texto(url_pdf):
 
 
 # --- Caminho do arquivo PDF ---
-url_pdf = "" # --- Colocar o link do pdf ---
+url_pdf = "" # --- Colocar caminho do arquivo do pdf ---
 texto = extrair_texto(url_pdf)
 
 # --- Quantidade de perguntas desejada ---
