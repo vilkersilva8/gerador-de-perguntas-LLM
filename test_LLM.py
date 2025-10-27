@@ -1,10 +1,13 @@
 import PyPDF2
 import google.generativeai as genai
 import json
-
+from urllib.parse import urlparse, unquote 
 # --- Função para extrair o texto do PDF ---
 def extrair_texto(url_pdf):
-    with open(url_pdf, "rb") as f:
+    caminho_local = unquote(urlparse(url_pdf).path)  
+    if caminho_local.startswith("/") and caminho_local[2] == ":":
+        caminho_local = caminho_local[1:] 
+    with open(caminho_local, "rb") as f:
         leitor = PyPDF2.PdfReader(f)  # leitor de páginas do PDF
         texto = ""
         for pagina in leitor.pages:
@@ -13,21 +16,21 @@ def extrair_texto(url_pdf):
 
 
 # --- Caminho do arquivo PDF ---
-url_pdf = r"" # --- Colocar caminho do arquivo do pdf ---
+url_pdf = "" # --- Colocar o link do pdf ---
 texto = extrair_texto(url_pdf)
 
 # --- Quantidade de perguntas desejada ---
 n = int(input("Quantas perguntas serão geradas: "))
 
 # --- Configuração da API do Gemini ---
-genai.configure(api_key="") #--- Colocar chave ---
+genai.configure(api_key="") #--- Colocar chave API ---
 
 
 # --- Função para gerar perguntas com o Gemini ---
 def gerarperguntas(texto, n):
     prompt = f""" 
     Gere {n} perguntas de múltipla escolha sobre o texto abaixo.
-    Retorne *somente* em formato JSON, assim:
+    Retorne somente em formato JSON, assim:
     [
       {{ 
         "pergunta": "texto da pergunta",
@@ -45,7 +48,7 @@ def gerarperguntas(texto, n):
 
     # --- Limpeza do texto de resposta ---
     texto_limpo = resposta.text.strip()
-    texto_limpo = texto_limpo.replace("```json", "").replace("```", "").strip()
+    texto_limpo = texto_limpo.replace("json", "").replace("", "").strip()
 
     try:
         perguntas = json.loads(texto_limpo)
