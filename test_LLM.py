@@ -20,7 +20,7 @@ texto = extrair_texto(url_pdf)
 n = int(input("Quantas perguntas serão geradas: "))
 
 # --- Configuração da API do Gemini ---
-genai.configure(api_key="AIzaSyC9lf0CfeENgNmlcA6lMHe14qW_F1-oM14")
+genai.configure(api_key="")
 
 
 # --- Função para gerar perguntas com o Gemini ---
