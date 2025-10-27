@@ -13,7 +13,7 @@ def extrair_texto(url_pdf):
 
 
 # --- Caminho do arquivo PDF ---
-url_pdf = r"C:/Users/DELL/Desktop/lab Arquitetura/Sprint1_-_Rev_verilog_-_Simulao_Combinacional (2).pdf"
+url_pdf = r""
 texto = extrair_texto(url_pdf)
 
 # --- Quantidade de perguntas desejada ---
