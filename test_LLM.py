@@ -50,8 +50,8 @@ def gerarperguntas(texto, n):
     try:
         perguntas = json.loads(texto_limpo)
     except Exception as e:
-        print("❌ Erro ao converter JSON:", e)
-        print("🧾 Texto recebido do modelo:\n")
+        print("Erro ao converter JSON:", e)
+        print("Texto recebido do modelo:\n")
         print(texto_limpo)
         perguntas = []
 
@@ -68,4 +68,4 @@ print(json.dumps(perguntas, indent=2, ensure_ascii=False))
 with open("perguntas.json", "w", encoding="utf-8") as f:
     json.dump(perguntas, f, indent=2, ensure_ascii=False)
 
-print("\n✅ Arquivo 'perguntas.json' gerado com sucesso!")
+print("\n Arquivo 'perguntas.json' gerado com sucesso!")

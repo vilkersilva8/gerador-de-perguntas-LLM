@@ -1,13 +1,13 @@
 [
   {
-    "pergunta": "Qual plataforma online é recomendada para a Sprint 1 e quais configurações iniciais devem ser aplicadas ao iniciar um novo projeto?",
+    "pergunta": "Qual ferramenta e simulador devem ser selecionados para o projeto no edaplayground.com, conforme as instruções da Sprint 1?",
     "alternativas": [
-      "A) edaplayground.com, com Language: SystemVerilog/Verilog, Tools & Simulator: Aldec Riviera Pro 2023.04, e a opção 'Open EPWave after run' habilitada.",
-      "B) edaplayground.com, com Language: VHDL, Tools & Simulator: ModelSim, e a opção 'Open EPWave after run' desabilitada.",
-      "C) GitHub Classroom, com Language: SystemVerilog, Tools & Simulator: Xilinx Vivado, e a opção de gerar relatórios de simulação.",
-      "D) Google Colab, com Language: Verilog, Tools & Simulator: Icarus Verilog, e a opção de visualizar waveforms em formato texto."
+      "A) Aldec Riviera Pro 2023.04",
+      "B) ModelSim",
+      "C) Xilinx Vivado",
+      "D) Quartus Prime"
     ],
     "correta": "A",
-    "explicacao": "De acordo com o item 2 da 'Preparação para a sprint', é necessário criar uma conta no https://edaplayground.com/ e iniciar um projeto novo com as seguintes configurações: Language: SystemVerilog/Verilog, Tools & Simulator: Aldec Riviera Pro 2023.04, e a opção 'Open EPWave after run' habilitada."
+    "explicacao": "As instruções da Sprint 1 especificam claramente que o 'Tools & Simulator' a ser selecionado no edaplayground.com é 'Aldec Riviera Pro 2023.04'."
   }
 ]
