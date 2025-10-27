@@ -13,14 +13,14 @@ def extrair_texto(url_pdf):
 
 
 # --- Caminho do arquivo PDF ---
-url_pdf = r""
+url_pdf = r"" # --- Colocar caminho do arquivo do pdf ---
 texto = extrair_texto(url_pdf)
 
 # --- Quantidade de perguntas desejada ---
 n = int(input("Quantas perguntas serão geradas: "))
 
 # --- Configuração da API do Gemini ---
-genai.configure(api_key="")
+genai.configure(api_key="") #--- Colocar chave ---
 
 
 # --- Função para gerar perguntas com o Gemini ---
